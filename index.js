@@ -5,4 +5,6 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, "client")));
 
-app.listen(3000);
+app.listen(3000, () => {
+  console.log("app running at port:3000");
+});
