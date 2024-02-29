@@ -15,6 +15,9 @@ const Work = () => {
       console.log("Geolocation is not available in your browser.");
     }
   }, []);
+
+  
+
   return (
     <>
       <section className="text-gray-400 bg-gray-900 body-font relative">
