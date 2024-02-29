@@ -2,13 +2,16 @@ import React, { useEffect, useState } from "react";
 
 const Work = () => {
   const [position, setPosition] = useState({ latitude: null, longitude: null });
-  const [data, setData] = useState({});
 
   function handleSubmit(e) {
-    e.preventDefault;
+    e.preventDefault();
     const formData = new FormData(e.target);
+    formData.append("latitude", position.latitude);
+    formData.append("longitude", position.longitude);
 
-    console.log(formData);
+    const data = Object.fromEntries(formData.entries());
+
+    console.log(data);
   }
 
   useEffect(() => {
@@ -38,8 +41,8 @@ const Work = () => {
             </p>
           </div>
           <div className="lg:w-1/2 md:w-2/3 mx-auto">
-            <div className="flex flex-wrap -m-2">
-              <form action="/submit" method="get">
+            <div className="flex flex-col justyfy-center w-full">
+              <form onSubmit={handleSubmit} method="get">
                 <div className="p-2 w-full">
                   <div className="relative">
                     <label
