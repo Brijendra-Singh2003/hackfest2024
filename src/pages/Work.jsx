@@ -2,6 +2,14 @@ import React, { useEffect, useState } from "react";
 
 const Work = () => {
   const [position, setPosition] = useState({ latitude: null, longitude: null });
+  const [data, setData] = useState({});
+
+  function handleSubmit(e) {
+    e.preventDefault;
+    const formData = new FormData(e.target);
+
+    console.log(formData);
+  }
 
   useEffect(() => {
     if ("geolocation" in navigator) {
@@ -15,8 +23,6 @@ const Work = () => {
       console.log("Geolocation is not available in your browser.");
     }
   }, []);
-
-  
 
   return (
     <>
@@ -285,8 +291,6 @@ const Work = () => {
           </div>
         </div>
       </section>
-
-     
     </>
   );
 };
