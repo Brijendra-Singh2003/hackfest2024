@@ -1,6 +1,13 @@
 import React from "react";
+import { useEffect } from "react";
 
 const Work = () => {
+  
+ 
+
+// map.on('locationfound', onLocationFound);
+// map.on('locationerror', onLocationError); 
+  
   return (
     <>
       <header className="text-gray-400 bg-gray-900 body-font">
@@ -185,15 +192,50 @@ const Work = () => {
                 <div className="p-2 w-full">
                   <div className="relative">
                     <label
-                      htmlFor="password"
+                      htmlFor="pin-code"
                       className="leading-7 text-sm text-gray-400"
                     >
-                      pin code
+                      pin-code
                     </label>
                     <input
-                      type="password"
-                      id="password"
-                      name="password"
+                      type="pin-code"
+                      id="pin-code"
+                      name="pin-code"
+                      className="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-red-500 focus:bg-gray-900 focus:ring-2 focus:ring-red-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                      // style={{ width: "150%" }}
+                    />
+                  </div>
+                </div>
+                <div className="p-2 w-full">
+                  <div className="relative">
+                    <label
+                      htmlFor="experience"
+                      className="leading-7 text-sm text-gray-400"
+                    >
+                      experience
+                    </label>
+                    <input
+                      type="experience"
+                      id="experience"
+                      name="experience"
+                      className="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-red-500 focus:bg-gray-900 focus:ring-2 focus:ring-red-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                      // style={{ width: "150%" }}
+                    />
+                  </div>
+                </div>
+
+                <div className="p-2 w-full">
+                  <div className="relative">
+                    <label
+                      htmlFor="experience"
+                      className="leading-7 text-sm text-gray-400"
+                    >
+                      {latitude}
+                    </label>
+                    <input
+                      type="experience"
+                      id="experience"
+                      name="experience"
                       className="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-red-500 focus:bg-gray-900 focus:ring-2 focus:ring-red-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                       // style={{ width: "150%" }}
                     />
@@ -364,6 +406,8 @@ const Work = () => {
             </a>
           </span>
         </div>
+
+        
       </footer>
     </>
   );
